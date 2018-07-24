@@ -1,0 +1,28 @@
+{
+  "name": "donate-period",
+  "version": "1.0.0",
+  "description": "Charity Donation Web App",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simone-smith/donate-period.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simone-smith/donate-period/issues"
+  },
+  "homepage": "https://github.com/simone-smith/donate-period#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.2.0"
+  }
+}
