@@ -10,12 +10,6 @@ const wishlist = [
                     { "item": "wet wipes" }
                  ];
 
-
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
-});
-
-
 app.get('/wishlist/', function(req, res) {
     res.json(wishlist);
 });
