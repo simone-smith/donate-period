@@ -15,8 +15,12 @@
 #### Work Flow - Tickets
 [Trello](https://trello.com/b/q4a2xRgA/donation-period)
 
-#### Route Table 
+#### Route Table
 |     Task      | HTTP-method | URI |  Content-Type   |
 | --- | --- | --- | --- |
-| Index.html   |   GET    |  / |   text/html   |
 | Retrieve wishlist items    |   GET    |  /wishlist |   JSON   |
+
+#### Development Process
+
+##### Backend Application
+During development process we used nodemon to manage our server connection. This package watches for changes in our code base and restarts the server when a change is identified: ```nodemon app.js```
