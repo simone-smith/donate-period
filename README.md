@@ -12,6 +12,9 @@
 2. The terminal will display the localhost port number for you to visit: ```localhost:3000```
 3. When finished with the application, close the server with ```^c```
 
+#### Run Tests:
+1. Backend-tests ```npm test```
+
 #### Work Flow - Tickets
 [Trello](https://trello.com/b/q4a2xRgA/donation-period)
 
