@@ -9,4 +9,4 @@ export default class CheckboxWithLabel extends React.Component {
   }
 }
 
-ReactDOM.render(<CheckboxWithLabel />, document.getElementById('root'));
+// ReactDOM.render(<CheckboxWithLabel />, document.getElementById('root'));
