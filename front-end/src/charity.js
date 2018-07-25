@@ -22,4 +22,4 @@ export default class Charity extends React.Component {
       </div>
     );
   }
-}
+} 

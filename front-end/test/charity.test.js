@@ -11,7 +11,3 @@ test("Charity displays a link on the page", () => {
   const input = wrapper.find('input');
   expect(input.render().attr('value')).toEqual("Charity's Wishlist")
 });
-
-test("When you click the Charity link, it returns the wishlist", () => {
-
-});
