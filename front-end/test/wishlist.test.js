@@ -7,6 +7,6 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() })
 
 test("Wishlist displays a wishlist on the page", () => {
-  const hello = shallow(<Wishlist />);
-  expect(hello.text()).toEqual("Hello")
+  const wishlist = shallow(<Wishlist />);
+  expect(wishlist.text()).toEqual("toilet paper, sanitary pads, tampons, wet wipes")
 });
