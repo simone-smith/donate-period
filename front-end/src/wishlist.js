@@ -48,4 +48,4 @@ export default class Wishlist extends React.Component {
       );
     }
   }
-}
+};
