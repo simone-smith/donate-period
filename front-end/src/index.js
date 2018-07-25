@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Wishlist from './wishlist';
 
-export default class Wishlist extends React.Component {
+class App extends React.Component {
   render() {
     return (
-      <h1>Hello</h1>
+      <Wishlist />
     );
   }
 }
 
-// ReactDOM.render(<Wishlist />, document.getElementById('root'));
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
