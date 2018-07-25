@@ -2,7 +2,8 @@ import React from 'react';
 
 export default class Wishlist extends React.Component {
 
-  constructor() {
+  constructor(props) {
+    super(props);
     this.state = {
       error: null,
       isLoaded: false,
@@ -11,7 +12,7 @@ export default class Wishlist extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3010/wishlist/')
+    fetch('http://192.168.48.61:3010/wishlist/')
       .then(res => res.json())
       .then(
         (result) => {
