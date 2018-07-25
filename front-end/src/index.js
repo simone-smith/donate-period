@@ -9,4 +9,4 @@ export default class Wishlist extends React.Component {
   }
 }
 
-// ReactDOM.render(<CheckboxWithLabel />, document.getElementById('root'));
+// ReactDOM.render(<Wishlist />, document.getElementById('root'));
