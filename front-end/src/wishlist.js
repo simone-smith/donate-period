@@ -12,7 +12,7 @@ export default class Wishlist extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://192.168.48.61:3010/wishlist/')
+    fetch('http://localhost:3010/wishlist/')
       .then(res => res.json())
       .then(
         (result) => {
