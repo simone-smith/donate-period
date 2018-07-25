@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import Enzyme from 'enzyme';
 import {shallow} from 'enzyme';
-import Wishlist from '../src/index.js'
+import Wishlist from '../src/wishlist.js'
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() })
 
