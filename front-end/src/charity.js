@@ -22,4 +22,8 @@ export default class Charity extends React.Component {
       </div>
     );
   }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> e7029fe203d307832d842eef34d8ef2becc68968
