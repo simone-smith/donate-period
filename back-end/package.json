@@ -4,6 +4,7 @@
   "description": "Charity Donation Web App",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "mocha --exit"
   },
   "repository": {
