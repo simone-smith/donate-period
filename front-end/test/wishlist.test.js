@@ -23,9 +23,36 @@ describe('<Wishlist />', () => {
             items: []
         });
 
-        wishlist.render(wishlist.state);
-
         expect(wishlist.text()).toEqual("Error: ")
+    });
+
+    it("The page is loading", async () => {
+        let wishlist = shallow(<Wishlist/>);
+
+        wishlist.setState({
+            error: false,
+            isLoaded: false,
+            items: []
+        });
+
+        expect(wishlist.text()).toEqual("Loading...")
+    });
+
+    it("Items are displayed", async () => {
+        let wishlist = shallow(<Wishlist/>);
+
+        wishlist.setState({
+            error: false,
+            isLoaded: true,
+            items: [
+              { "item": "toilet paper" },
+              { "item": "sanitary pads" },
+              { "item": "tampons" },
+              { "item": "wet wipes" }
+            ]
+        });
+
+        expect(wishlist.text()).toEqual( "toilet papersanitary padstamponswet wipes")
     });
 
   });
