@@ -8,6 +8,7 @@
     "regenerator-runtime": "^0.12.0"
   },
   "scripts": {
+    "start": "open public/index.html",
     "test": "jest"
   },
   "devDependencies": {
