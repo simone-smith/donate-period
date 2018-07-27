@@ -13,13 +13,15 @@ export default class Wishlist extends React.Component {
 
   componentDidMount(){
     fetch('http://localhost:3010/wishlist/')
-      .then(res => res.json())
+      .then(res => console.log(res) || res.json())
       .then(
         (result) => {
+          console.log(result);
           this.setState({
             isLoaded: true,
             items: result
           });
+
         },
         (error) => {
           this.setState({
@@ -28,6 +30,7 @@ export default class Wishlist extends React.Component {
           });
         }
       )
+      console.log(this.state)
   }
 
   render() {
