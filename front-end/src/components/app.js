@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Charity from './charity';
 
-export default class App extends React.Component {
+class App extends Component {
   render() {
     return (
     <Charity />
     );
   }
 }
+
+export default App;
