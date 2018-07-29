@@ -12,7 +12,6 @@ describe('<About />', () => {
   let about = shallow(<About />)
 
   it('Renders the About title', () => {
-    console.log(about.debug())
     expect(about.find('h1').text()).toEqual('About Us')
   });
 
