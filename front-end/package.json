@@ -1,6 +1,10 @@
 {
   "name": "donate-period",
   "private": true,
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
+  },
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
