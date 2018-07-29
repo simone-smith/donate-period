@@ -27,6 +27,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.4.1",
+    "jest-fetch-mock": "^1.6.5",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack-cli": "^3.1.0",
