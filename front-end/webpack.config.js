@@ -1,10 +1,12 @@
 const path = require('path');
+const webpack = require("webpack");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   plugins: [
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin(['dist']),
+    new webpack.HotModuleReplacementPlugin() 
   ],
   module: {
         rules: [
@@ -27,5 +29,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname,'public'),
+    port: 3000,
+    publicPath: "http://localhost:3000/dist"
   },
 };
