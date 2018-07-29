@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Wishlist extends React.Component {
+class Wishlist extends Component {
 
   constructor(props) {
     super(props);
@@ -20,7 +20,6 @@ export default class Wishlist extends React.Component {
             isLoaded: true,
             items: result
           });
-
         },
         (error) => {
           this.setState({
@@ -50,3 +49,5 @@ export default class Wishlist extends React.Component {
     }
   }
 };
+
+export default Wishlist;

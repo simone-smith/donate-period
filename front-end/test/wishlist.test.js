@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import Enzyme from 'enzyme';
 import {shallow} from 'enzyme';
-import Wishlist from '../src/wishlist.js'
+import Wishlist from '../src/components/wishlist.js'
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 import 'whatwg-fetch';
@@ -25,7 +25,7 @@ describe('<Wishlist />', () => {
                   resolve({
                       ok: true,
                       json: function () {
-                          return {item: 'test item'};
+                          return [{item: 'test item'}];
                       }
                   });
                   reject({})
@@ -38,7 +38,7 @@ describe('<Wishlist />', () => {
           const wrapper = shallow(<Wishlist/>);
           setImmediate(() => {
               wrapper.update();
-              expect(wrapper.state('items')).toEqual({item: 'test item'});
+              expect(wrapper.state('items')).toEqual([{item: 'test item'}]);
           });
       });
     });
