@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class About extends Component {
 
@@ -22,6 +23,9 @@ class About extends Component {
               </a>
             </li>
           </ul>
+        <Link to={'/'}>
+          Home
+        </Link>
       </div>
     )
   }
