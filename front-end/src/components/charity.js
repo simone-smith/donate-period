@@ -1,7 +1,7 @@
-import React from 'react';
-import Wishlist from './wishlist'
+import React, { Component } from 'react';
+import Wishlist from './wishlist';
 
-export default class Charity extends React.Component {
+class Charity extends Component {
   constructor() {
     super();
 
@@ -23,3 +23,5 @@ export default class Charity extends React.Component {
     );
   }
 }
+
+export default Charity;
