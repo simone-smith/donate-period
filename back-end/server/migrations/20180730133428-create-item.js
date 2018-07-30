@@ -28,13 +28,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      charityId: {
+      justGivingCharityId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'Charities',
-          key: 'id',
-          as: 'charityId',
+          key: 'justGivingCharityId',
         },
       },
     });

@@ -2,11 +2,14 @@
 module.exports = (sequelize, DataTypes) => {
   var Charity = sequelize.define('Charity', {
     name: DataTypes.STRING,
-    justGivingCharityId: DataTypes.INTEGER,
+    justGivingCharityId: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    }
   }, {});
   Charity.associate = function(models) {
     Charity.hasMany(models.Item, {
-      foreignKey: 'charityId',
+      foreignKey: 'justGivingCharityId',
     });
   };
   return Charity;

@@ -18,10 +18,10 @@ module.exports = (app) => {
     charitiesController.retrieve(req, res)
   });
 
-  app.post('/api/charities/:charityId/items', (req, res) => {
+  app.post('/api/charities/:justGivingCharityId/items', (req, res) => {
     itemsController.create(req, res)
   });
-  app.get('/api/charities/:charityId/items', (req, res) => {
+  app.get('/api/charities/:justGivingCharityId/items', (req, res) => {
     itemsController.list(req, res)
   });
 };

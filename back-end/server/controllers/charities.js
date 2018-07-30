@@ -22,8 +22,9 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   },
   retrieve(req, res) {
+    console.log(req.params.justGivingCharityId);
     return Charity
-      .findById(req.params.charityId, {
+      .findById(req.params.justGivingCharityId, {
         include: [{
           model: Item,
         }],

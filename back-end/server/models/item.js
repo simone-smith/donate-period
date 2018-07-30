@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Item.associate = function(models) {
     Item.belongsTo(models.Charity, {
-      foreignKey: 'charityId',
+      foreignKey: 'justGivingCharityId',
       onDelete: 'CASCADE',
     });
   };
