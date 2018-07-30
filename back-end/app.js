@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 app.use(cors());
 app.use(bodyParser.json());
 
-const charityWishlists = [ { "charityId": "2201",
+const charityWishlists = [ { charityId: 2201,
                               "wishlist": [
                                 { "itemID": 1,
                                   "itemName": "toilet paper",
@@ -23,7 +23,7 @@ const charityWishlists = [ { "charityId": "2201",
                                 }
                               ]
                             },
-                            { "charityId": "2357",
+                            { charityId: 2357,
                                 "wishlist": [
                                   { "itemID": 3,
                                     "itemName": "cleaning fluid",
@@ -39,7 +39,7 @@ const charityWishlists = [ { "charityId": "2201",
                                   }
                                 ]
                               },
-                              { "charityId": "2116",
+                              { charityId: 2116,
                                 "wishlist": [
                                   { "itemID": 1,
                                     "itemName": "toilet paper",
@@ -64,13 +64,13 @@ const charityWishlists = [ { "charityId": "2201",
                           ];
 
 
- // app.get('/charity/:charityId', function(req, res) {
- //   const charityWishlist = charityWishlists.find(c => c.charityId === parseInt(req.params.charityId));
- //   // const msg_404 = 'The wishlist for the given ID not found';
- //   if (!charityWishlists) return res.status(404).send(msg_404);
- //
- //   res.send(charityWishlist);
- // });
+ app.get('/charity/:charityId', function(req, res) {
+   const charityWishlist = charityWishlists.find(c => c.charityId === parseInt(req.params.charityId));
+   // const msg_404 = 'The wishlist for the given ID not found';
+   if (!charityWishlists) return res.status(404).send(msg_404);
+
+   res.send(charityWishlist);
+ });
 
 
 app.get('/wishlist /', function(req, res) {
