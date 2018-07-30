@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import CharitiesBuilder from './charitiesBuilder';
-import About from './about';
+import CharitiesBuilder from './CharitiesBuilder';
+import About from './About';
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
         <div>
           THIS IS THE HOME PAGE....
-          <Link to={'/charities'}>
+          <Link to={'/Charities'}>
             View our charity partners
           </Link>
           {" "}
-          <Link to={'/about'}>
+          <Link to={'/About'}>
             About
           </Link>
         </div>
@@ -20,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
