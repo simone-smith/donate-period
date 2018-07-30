@@ -38,7 +38,10 @@ class CharitiesBuilder extends Component {
           { charity['name']} <br></br>
           { charity['description'] }<br></br>
           { charity['registrationNumber'] }<br></br>
-          <img src= { charity['logoUrl'] } height="42" width="auto"></img>
+          <img src= { charity['logoUrl'] } height="42" width="auto"></img><br></br>
+          <Link to={`/wishlist/${charity['charityId']}`}>
+            Our Wishlist
+          </Link>
         </li>
       ))}
       </ul>
@@ -47,10 +50,6 @@ class CharitiesBuilder extends Component {
       <div>
         <Link to={'/'}>
           Back
-        </Link>
-        {" "}
-        <Link to={'/wishlist'}>
-          Our Wishlist
         </Link>
       </div>
       </div>
