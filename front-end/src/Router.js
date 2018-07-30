@@ -9,9 +9,6 @@ import Wishlist from './Pages/Wishlist';
 import Donate from './Pages/Donate';
 
 class Router extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
