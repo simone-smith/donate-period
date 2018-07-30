@@ -82,8 +82,7 @@ describe('<Wishlist />', () => {
               { "item": "wet wipes" }
             ]
         });
-
-        expect(wishlist.text()).toEqual( "toilet papersanitary padstamponswet wipes")
+        expect(wishlist.find('ul').text()).toEqual( "toilet papersanitary padstamponswet wipes")
       });
 
     });
