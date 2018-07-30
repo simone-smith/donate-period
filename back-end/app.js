@@ -66,7 +66,7 @@ const charityWishlists = [ { charityId: 2201,
 
  app.get('/charity/:charityId', function(req, res) {
    const charityWishlist = charityWishlists.find(c => c.charityId === parseInt(req.params.charityId));
-   // const msg_404 = 'The wishlist for the given ID not found';
+   const msg_404 = 'The wishlist for the given ID not found';
    if (!charityWishlists) return res.status(404).send(msg_404);
 
    res.send(charityWishlist);
