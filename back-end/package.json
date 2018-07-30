@@ -21,11 +21,15 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.38.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "sequelize-cli": "^4.0.0"
   }
 }

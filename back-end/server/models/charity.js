@@ -4,7 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   Charity.associate = function(models) {
-    Charity.belongsToMany(models.Item, {through: 'CharityItem', foreignKey: 'itemId'});
+    Charity.hasMany(models.Item, {
+      foreignKey: 'charityId',
+    });
   };
   return Charity;
 };

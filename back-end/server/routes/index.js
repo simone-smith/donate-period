@@ -14,11 +14,14 @@ module.exports = (app) => {
   app.get('/api/charities', (req, res) => {
     charitiesController.list(req, res)
   });
+  app.get('/api/charities/:charityId', (req, res) => {
+    charitiesController.retrieve(req, res)
+  });
 
-  app.post('/api/items', (req, res) => {
+  app.post('/api/charities/:charityId/items', (req, res) => {
     itemsController.create(req, res)
   });
-  app.get('/api/items', (req, res) => {
+  app.get('/api/charities/:charityId/items', (req, res) => {
     itemsController.list(req, res)
   });
 };

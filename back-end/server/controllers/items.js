@@ -5,7 +5,8 @@ module.exports = {
     return Item
       .create({
         product: req.query.product,
-        price: req.query.price
+        price: req.query.price,
+        charityId: req.params.charityId
       })
       .then(item => res.status(201).send(item))
       .catch(error => res.status(400).send(error));

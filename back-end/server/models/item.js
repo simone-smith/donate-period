@@ -5,7 +5,10 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.FLOAT
   }, {});
   Item.associate = function(models) {
-    Item.belongsToMany(models.Charity, {through: 'CharityItem', foreignKey: 'charityId'});
+    Item.belongsTo(models.Charity, {
+      foreignKey: 'charityId',
+      onDelete: 'CASCADE',
+    });
   };
   return Item;
 };
