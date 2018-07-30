@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Wishlist from './wishlist';
+import Wishlist from './Wishlist';
 
 class Charity extends Component {
   constructor() {

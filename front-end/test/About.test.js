@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() })
 
-import About from '../src/components/about.js'
+import About from '../src/Pages/About.js'
 
 describe('<About />', () => {
 
