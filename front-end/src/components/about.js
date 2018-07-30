@@ -23,6 +23,11 @@ class About extends Component {
               </a>
             </li>
           </ul>
+        <Link to={'/charities'}>
+          View our charity partners
+        </Link>
+        {"      "}
+        {"      "}
         <Link to={'/'}>
           Home
         </Link>
