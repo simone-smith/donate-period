@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Wishlist extends Component {
 
@@ -38,6 +39,8 @@ class Wishlist extends Component {
       return <div>Loading...</div>;
     } else {
       return (
+        <div>
+        <div>
         <ul>
         {items.map(item => (
           <li key={item['item']}>
@@ -45,6 +48,17 @@ class Wishlist extends Component {
           </li>
         ))}
         </ul>
+        </div>
+        <div>
+        <Link to={'/charitiesBuilder'}>
+          Back
+        </Link>
+        {" "}
+        <Link to={'/donate'}>
+          Donate Now
+        </Link>
+        </div>
+        </div>
       );
     }
   }

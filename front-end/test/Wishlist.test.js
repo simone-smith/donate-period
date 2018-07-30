@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import Enzyme from 'enzyme';
 import {shallow} from 'enzyme';
-import Wishlist from '../src/components/wishlist.js'
+import Wishlist from '../src/Pages/Wishlist.js'
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 import 'whatwg-fetch';
@@ -82,8 +82,7 @@ describe('<Wishlist />', () => {
               { "item": "wet wipes" }
             ]
         });
-
-        expect(wishlist.text()).toEqual( "toilet papersanitary padstamponswet wipes")
+        expect(wishlist.find('ul').text()).toEqual( "toilet papersanitary padstamponswet wipes")
       });
 
     });

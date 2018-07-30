@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 require('./server/routes')(app);
 
-const charityWishlists = [ { charityId: 2201,
+const charityWishlists = [ { justGivingCharityId: 2201,
                               "wishlist": [
                                 { "itemID": 1,
                                   "itemName": "toilet paper",
@@ -25,7 +25,7 @@ const charityWishlists = [ { charityId: 2201,
                                 }
                               ]
                             },
-                            { charityId: 2357,
+                            { justGivingCharityId: 2357,
                                 "wishlist": [
                                   { "itemID": 3,
                                     "itemName": "cleaning fluid",
@@ -41,7 +41,7 @@ const charityWishlists = [ { charityId: 2201,
                                   }
                                 ]
                               },
-                              { charityId: 2116,
+                              { justGivingCharityId: 2116,
                                 "wishlist": [
                                   { "itemID": 1,
                                     "itemName": "toilet paper",
@@ -65,9 +65,8 @@ const charityWishlists = [ { charityId: 2201,
                               }
                           ];
 
-
- app.get('/charity/:charityId', function(req, res) {
-   const charityWishlist = charityWishlists.find(c => c.charityId === parseInt(req.params.charityId));
+ app.get('/charity/:justGivingCharityId', function(req, res) {
+   const charityWishlist = charityWishlists.find(c => c.justGivingCharityId === parseInt(req.params.justGivingCharityId));
    const msg_404 = 'The wishlist for the given ID not found';
    if (!charityWishlists) return res.status(404).send(msg_404);
 
@@ -75,6 +74,7 @@ const charityWishlists = [ { charityId: 2201,
  });
 
 app.get('/wishlist/', function(req, res) {
+
   res.json(wishlist);
 });
 
