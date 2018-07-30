@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
         <div>
+          THIS IS THE HOME PAGE....
           <Link to={'/charities'}>
             View our charity partners
           </Link>
