@@ -21,17 +21,30 @@ class CharitiesBuilder extends Component {
       .then(
         (result) => {
           this.setState({
-            charities: result
+            charities: result.charitySearchResults
           });
         },
       )
   }
 
   render() {
+    const { charities } = this.state;
     return (
-      // All Charities to go here
       <div>
+      <div>
+      <ul>
+      {charities.map(charity => (
+        <li key={charity['charityId']}>
+          { charity['name']} <br></br>
+          { charity['description'] }<br></br>
+          { charity['registrationNumber'] }<br></br>
+          <img src= { charity['logoUrl'] } height="42" width="auto"></img>
+        </li>
+      ))}
+      </ul>
+      </div>
 
+      <div>
         <Link to={'/'}>
           Back
         </Link>
@@ -39,6 +52,7 @@ class CharitiesBuilder extends Component {
         <Link to={'/wishlist'}>
           Our Wishlist
         </Link>
+      </div>
       </div>
     );
   }
