@@ -20,6 +20,10 @@ class CharitiesBuilder extends Component {
         <Link to={'/'}>
           Back
         </Link>
+        {" "}
+        <Link to={'/wishlist'}>
+          Our Wishlist
+        </Link>
       </div>
     );
   }
