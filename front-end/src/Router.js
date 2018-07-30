@@ -17,7 +17,8 @@ class Router extends Component {
                     <Route exact path='/' component={Home} />
                     <Route path='/About' component={About} />
                     <Route path='/Charities' component={CharitiesBuilder} />
-                    <Route path='/Wishlist' component={Wishlist} />
+                    <Route path='/Wishlist/' component={Wishlist} />
+                    <Route path='/Wishlist/:id' component={Wishlist} />
                     <Route path='/Donate' component={Donate} />
                     <Redirect from='*' to='/' />
                 </Switch>

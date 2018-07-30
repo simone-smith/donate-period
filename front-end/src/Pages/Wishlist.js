@@ -13,13 +13,13 @@ class Wishlist extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3010/wishlist/')
+    fetch(`http://localhost:3010/charity/2201`)
       .then(res => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result
+            items: result.wishlist
           });
         },
         (error) => {
@@ -41,20 +41,24 @@ class Wishlist extends Component {
       return (
         <div>
         <div>
+        <Link to={'/charitiesBuilder'}>
+          Back
+        </Link>
+        </div>
+        <div>
         <ul>
         {items.map(item => (
-          <li key={item['item']}>
-            {item['item']}
+          <li key={item['itemID']}>
+            {item['itemName']}<br></br>
+            {item['itemDescription']}<br></br>
+            {item['itemPrice']}<br></br>
+            <img src= { item['itemImage'] } height="42" width="auto"></img><br></br>
           </li>
         ))}
         </ul>
         </div>
         <div>
-        <Link to={'/charitiesBuilder'}>
-          Back
-        </Link>
-        {" "}
-        <Link to={'/donate'}>
+      <Link to={'/donate'}>
           Donate Now
         </Link>
         </div>
