@@ -1,8 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Item = sequelize.define('Item', {
-    product: DataTypes.STRING,
-    price: DataTypes.FLOAT
+    itemName: DataTypes.STRING,
+    itemDescription: DataTypes.STRING,
+    itemImage: DataTypes.STRING,
+    itemPrice: DataTypes.FLOAT
   }, {});
   Item.associate = function(models) {
     Item.belongsTo(models.Charity, {

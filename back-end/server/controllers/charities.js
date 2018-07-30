@@ -6,6 +6,7 @@ module.exports = {
     return Charity
       .create({
         name: req.query.name,
+        justGivingCharityId: req.query.justGivingCharityId,
       })
       .then(charity => res.status(201).send(charity))
       .catch(error => res.status(400).send(error));
@@ -33,7 +34,8 @@ module.exports = {
             message: 'charity not found',
           });
         }
-        return res.status(200).send(charity);
+        let dataStructure = charity.dataValues.Items.map(item => item.dataValues)
+        res.status(200).send(dataStructure);
       })
       .catch(error => res.status(400).send(error));
   }

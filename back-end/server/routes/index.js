@@ -14,7 +14,7 @@ module.exports = (app) => {
   app.get('/api/charities', (req, res) => {
     charitiesController.list(req, res)
   });
-  app.get('/api/charities/:charityId', (req, res) => {
+  app.get('/api/charities/:justGivingCharityId', (req, res) => {
     charitiesController.retrieve(req, res)
   });
 

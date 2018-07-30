@@ -4,8 +4,10 @@ module.exports = {
   create(req, res) {
     return Item
       .create({
-        product: req.query.product,
-        price: req.query.price,
+        itemName: req.query.itemName,
+        itemDescription: req.query.itemDescription,
+        itemImage: req.query.itemImage,
+        itemPrice: req.query.itemPrice,
         charityId: req.params.charityId
       })
       .then(item => res.status(201).send(item))
