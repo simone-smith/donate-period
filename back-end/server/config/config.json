@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "simonesmith",
+    "password": null,
+    "database": "donate-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "simonesmith",
+    "password": null,
+    "database": "donate-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "simonesmith",
+    "password": null,
+    "database": "donate-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

@@ -7,6 +7,8 @@ const bodyParser = require('body-parser')
 app.use(cors());
 app.use(bodyParser.json());
 
+require('./server/routes')(app);
+
 const wishlist = [
                     { "item": "toilet paper" },
                     { "item": "sanitary pads" },
