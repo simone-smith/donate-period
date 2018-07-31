@@ -43,7 +43,7 @@ class Wishlist extends Component {
         <div>
         <ul>
         {items.map(item => (
-            <li key={item['id']}>{item['id']} {item['itemName']}</li>
+            <li key={item['id']}>{item['id']} {item['itemName']} {item['itemDescription']} {item['itemPrice']}</li>
         ))}
         </ul>
         </div>
