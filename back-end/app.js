@@ -7,6 +7,8 @@ const bodyParser = require('body-parser')
 app.use(cors());
 app.use(bodyParser.json());
 
+require('./server/routes')(app);
+
 const charityWishlists = [ { justGivingCharityId: 2201,
                               "wishlist": [
                                 { "itemID": 1,
@@ -63,7 +65,6 @@ const charityWishlists = [ { justGivingCharityId: 2201,
                               }
                           ];
 
-
  app.get('/charity/:justGivingCharityId', function(req, res) {
    const charityWishlist = charityWishlists.find(c => c.justGivingCharityId === parseInt(req.params.justGivingCharityId));
    const msg_404 = 'The wishlist for the given ID not found';
@@ -72,8 +73,8 @@ const charityWishlists = [ { justGivingCharityId: 2201,
    res.send(charityWishlist);
  });
 
+app.get('/wishlist/', function(req, res) {
 
-app.get('/wishlist /', function(req, res) {
   res.json(wishlist);
 });
 
