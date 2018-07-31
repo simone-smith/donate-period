@@ -13,7 +13,7 @@ class Wishlist extends Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3010/wishlist/')
+      fetch('http://localhost:3010/api/charities/' + this.props.match.params.id)
       .then(res => res.json())
       .then(
         (result) => {
@@ -43,9 +43,7 @@ class Wishlist extends Component {
         <div>
         <ul>
         {items.map(item => (
-          <li key={item['item']}>
-            {item['item']}
-          </li>
+            <li key={item['id']}>{item['id']} {item['itemName']} {item['itemDescription']} {item['itemPrice']}</li>
         ))}
         </ul>
         </div>
@@ -62,6 +60,6 @@ class Wishlist extends Component {
       );
     }
   }
-};
+}
 
 export default Wishlist;

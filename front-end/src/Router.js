@@ -12,12 +12,12 @@ class Router extends Component {
     render() {
         return (
                 <Switch>
-                    <Route exact path='/' component={Home}  />
+                    <Route path='/' exact component={Home}  />
                     <Route path='/About' component={About} />
                     <Route path='/Charities' component={CharitiesBuilder} />
-                    <Route path='/Wishlist' component={Wishlist} />
+                    <Route path='/Wishlist' exact component={Wishlist} />
+                    <Route path='/Wishlist/:id' exact component={Wishlist} />
                     <Route path='/Donate' component={Donate} />
-                    <Redirect from='*' to='/' />
                 </Switch>
         );
     }
