@@ -1,13 +1,16 @@
 import React from 'react';
-import { Button, ButtonGroup, ButtonToolbar, Glyphicon } from "react-bootstrap";
-
-
 import {Link} from "react-router-dom";
 
 const PageLayout = (props) => {
     return (
         <div>
-            <p>hi</p>
+            <div className="container">
+                <div className="d-flex justify-content-center row-hl">
+                    <div className="p-4 item-hl">Flex Item</div>
+                    <div className="p-4 item-hl">Flex Item</div>
+                    <div className="p-4 item-hl">Flex Item</div>
+                </div>
+            </div>
             <p>
                 <Link to={'/Home'}>Home</Link>{" | "}
                 <Link to={'/Charities'}>Charity List</Link>{" | "}
