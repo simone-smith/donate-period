@@ -19,7 +19,6 @@ class SearchFilter extends Component {
   }
 
   render() {
-    this.props.charities
     let filteredCharities = this.props.charities.filter(
       (charity) => {
         return charity.name.indexOf(this.state.searchFilter) !== -1;
