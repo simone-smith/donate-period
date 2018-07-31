@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import Charity from './Charity';
+
 
 class CharitiesBuilder extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       charities: []
     };
@@ -35,22 +35,18 @@ class CharitiesBuilder extends Component {
       <ul>
       {charities.map(charity => (
         <li key={charity['charityId']}>
-          { charity['name']} <br></br>
-          { charity['description'] }<br></br>
-          { charity['registrationNumber'] }<br></br>
-          <img src= { charity['logoUrl'] } height="42" width="auto"></img><br></br>
-          <Link to={`/wishlist/${charity['charityId']}`}>
-            Our Wishlist
-          </Link>
+          { charity['name']} <br/>
+          { charity['description'] }<br/>
+          { charity['registrationNumber'] }<br/>
+          <img src= { charity['logoUrl'] } height="42" width="auto" /><br/>
+          <Link to={'/wishlist/' + charity['charityId']} key={charity['charityId']}>Our Wishlist</Link>
         </li>
       ))}
       </ul>
       </div>
 
       <div>
-        <Link to={'/'}>
-          Back
-        </Link>
+        <Link to={'/'}>Back</Link>
       </div>
       </div>
     );
