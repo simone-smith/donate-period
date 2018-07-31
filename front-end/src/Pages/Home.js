@@ -6,6 +6,10 @@ class Home extends Component {
     return (
         <div>
             HOME PAGE CONTENT HERE
+            <br></br>
+            <Link to={'/Charities'}>View our charity partners</Link>
+            {" "}
+            <Link to={'/About'}>About</Link>
         </div>
     );
   }
