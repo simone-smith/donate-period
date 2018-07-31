@@ -29,7 +29,7 @@ describe('<SearchBar />', () => {
     });
 
     it('.handleChange updates the text in state', () => {
-      expect(searchBar.state().value).toEqual(charityName)
+      expect(searchBar.state().searchValue).toEqual(charityName)
     });
 
     })
