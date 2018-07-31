@@ -13,7 +13,6 @@ class Wishlist extends Component {
   }
 
   componentDidMount(){
-    console.log(this.props.match.params.id);
       fetch('http://localhost:3010/api/charities/' + this.props.match.params.id)
       .then(res => res.json())
       .then(
