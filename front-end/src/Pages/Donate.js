@@ -6,13 +6,9 @@ class Donate extends Component {
   render() {
     return (
       <div>
-        <Link to={'/wishlist'}>
-          Back
-        </Link>
+        <Link to={'/wishlist'}>Back</Link>
         {" "}
-        <Link to={'/charitiesBuilder'}>
-          Cancel
-        </Link>
+        <Link to={'/charitiesBuilder'}>Cancel</Link>
       </div>
     );
   }
