@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Charity from './Charity';
+import SearchFilter from './PageComponents/SearchFilter'
 
 class CharitiesBuilder extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class CharitiesBuilder extends Component {
     return (
       <div>
       <div>
+      <SearchFilter charities={charities}/>
       <ul>
       {charities.map(charity => (
         <li key={charity['charityId']}>
