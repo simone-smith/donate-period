@@ -5,8 +5,8 @@ module.exports = {
   create(req, res) {
     return Charity
       .create({
-        name: req.query.name,
-        justGivingCharityId: req.query.justGivingCharityId,
+        name: req.body.name,
+        justGivingCharityId: req.body.justGivingCharityId,
       })
       .then(charity => res.status(201).send(charity))
       .catch(error => res.status(400).send(error));
@@ -22,7 +22,6 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   },
   retrieve(req, res) {
-    console.log(req.params.justGivingCharityId);
     return Charity
       .findById(req.params.justGivingCharityId, {
         include: [{

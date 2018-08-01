@@ -13,10 +13,4 @@ module.exports = {
       .then(item => res.status(201).send(item))
       .catch(error => res.status(400).send(error));
   },
-  list(req, res) {
-    return Item
-      .all()
-      .then(items => res.status(200).send(items))
-      .catch(error => res.status(400).send(error));
-  },
 };
