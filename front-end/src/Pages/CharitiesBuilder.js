@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Charity from './PageComponents/Charity';
 
 class CharitiesBuilder extends Component {
   constructor(props) {

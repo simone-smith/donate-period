@@ -7,7 +7,6 @@ Enzyme.configure({ adapter: new Adapter() });
 import 'whatwg-fetch';
 global.fetch = require('jest-fetch-mock');
 import CharitiesBuilder from '../src/Pages/CharitiesBuilder.js'
-import Charity from '../src/Pages/PageComponents/Charity.js'
 
 describe('<CharitiesBuilder />', () => {
 
