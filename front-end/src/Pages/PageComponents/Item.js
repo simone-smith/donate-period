@@ -23,10 +23,15 @@ class Item extends Component {
   }
 
   handleDecrease() {
-    this.setState({
-      count: this.state.count - 1
-    });
-  }
+    if(this.state.counter === 0){
+      this.setState({
+        count: 0
+      });
+    }else {
+      this.setState({
+        count: this.state.count - 1
+      });
+    }
 
   render() {
     const { itemName, description, price, image } = this.props;

@@ -84,6 +84,12 @@ describe('<Item />', () => {
       expect(item.find('p').at(3).text()).toEqual("0")
     });
 
+    it('Prevents the counter from going below zero', () => {
+      item.find('button').at(1).simulate('click')
+      expect(item.state().count).toEqual(0)
+      expect(item.find('p').at(3).text()).toEqual("0")
+    }); 
+
   });
 
   describe('On clicking the check box', () => {
