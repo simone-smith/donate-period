@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ListFormat from './ListFormat.js'
+import ListFormat from './PageComponents/ListFormat'
 
 class Wishlist extends Component {
 

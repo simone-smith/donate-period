@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Item from './PageComponents/Item.js'
+import Item from './Item.js'
 
 const ListFormat = (props) => {
 
