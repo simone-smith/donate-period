@@ -90,25 +90,31 @@ As a donor,
 So that I can donate wisely,
 I would like to be able to see what items charities need
 ```
+```
 As a donor,
 So that I can donate to a cause I'm passionate about,
 I would like to be able to see the wishlists for multiple charities
+```
 ```
 As a donor,
 So that I can know more about the charity I'm donating to,
 I would like to see some information about each charity
 ```
+```
 As a donor,
 So that I can know what I'm donating,
 I would like to see information about each item on the charity's wishlist
+```
 ```
 As a charity,
 So that I can can request all of the items I need,
 I would like to have a wishlist with multiple items
 ```
+```
 As a donor,
 So that I can learn more about the website,
 I would like to view an About page
+```
 ```
 As a donor,
 So that I can make a large donation,
@@ -119,6 +125,7 @@ I would like to specify the quantity of each item I'm donating
 As a donor,
 So I know the cost of my donation,
 I would like my total to be calculated
+```
 ```
 As a donor,
 So I can find a charity quickly,  
