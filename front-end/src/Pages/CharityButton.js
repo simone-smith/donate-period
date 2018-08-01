@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Wishlist from './Wishlist';
 
-class Charity extends Component {
+class CharityButtton extends Component {
   constructor() {
     super();
 
@@ -24,4 +24,4 @@ class Charity extends Component {
   }
 }
 
-export default Charity;
+export default CharityButton;
