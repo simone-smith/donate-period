@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div>
+        <div className={"p-0 m-0 blue"}>
             INSERT FOOTER HERE
         </div>
     );

@@ -6,11 +6,11 @@ class About extends Component {
   render() {
     return (
       <div className="pageContainer">
-        <h1>About Us</h1>
-         <p>Founded: July 23, 2018
-         <br></br>
+          <h1 className="p-2 display-4 text-center">About Us</h1>
+          <p className="text-monospace text-center">Founded: July 23, 2018</p>
+          <p className={"text-justify"}>
          Donate, Period is a web platform that connects donors with the items charities need most. We exist to ensure that no great cause is without the products needed to provide their valuable services to our community.
-         <br></br>
+          </p>
          How do we do this?
          <br></br>
          We work with registered charities to create wishlists of their most needed items.
@@ -25,7 +25,7 @@ class About extends Component {
          What’s with the name?
          <br></br>
          Donate, Period was originally created to solve the problem of charities serving vulnerable women not having enough sanitary products to meet the needs of the individuals they served. Our belief was that there was a platform that would both make donors aware of the charity’s needs and provide them with a way to make a donation, this problem could be easily resolved. Sanitary products continue to be some of our top donated items.
-         </p>
+
          <br></br>
          <p>Find out what is happening in the world of Donate Period:</p>
           <ul>
