@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import Navbar from "./Navbar";
 import Content from "./Content";
 import Footer from "./Footer";
+
 
 const PageLayout = (props) => {
     return (
