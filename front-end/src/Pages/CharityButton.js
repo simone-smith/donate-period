@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Wishlist from './Wishlist';
 
-class CharityButtton extends Component {
+class CharityButton extends Component {
   constructor() {
     super();
 
