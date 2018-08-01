@@ -1,5 +1,6 @@
 # Donate Period
 
+#### Project Overview:
 Makers Academy final project. We have built a web app in 9 days that allows a user wisely donate to charity, providing an organisation with specific products that they need (and are often overlooked).
 
 ### Contributors:
@@ -83,17 +84,50 @@ Before getting started and settling on the idea for our final project, we discus
 * Pair programming and 2 day sprints
 * XP values, especially communication, simplicity and respect
 
-#### User Stories:
+####  Completed User Stories:
+```
+As a donor,
+So that I can donate wisely,
+I would like to be able to see what items charities need
+```
+As a donor,
+So that I can donate to a cause I'm passionate about,
+I would like to be able to see the wishlists for multiple charities
+```
+As a donor,
+So that I can know more about the charity I'm donating to,
+I would like to see some information about each charity
+```
+As a donor,
+So that I can know what I'm donating,
+I would like to see information about each item on the charity's wishlist
 ```
 As a charity,
-So I can get the "stuff" I need
-I would like to view my organisation's wishlist
-
-As a charitable user,
-So that I can donate wisely,
-I would like to be able to see what charities actually need
-
-XXXX
+So that I can can request all of the items I need,
+I would like to have a wishlist with multiple items
+```
+As a donor,
+So that I can learn more about the website,
+I would like to view an About page
+```
+As a donor,
+So that I can make a large donation,
+I would like to specify the quantity of each item I'm donating
+```
+#### Future User Stories:
+```
+As a donor,
+So I know the cost of my donation,
+I would like my total to be calculated
+```
+As a donor,
+So I can find a charity quickly,  
+I would like to use a navigation bar
+```
+```
+As a donor,
+So I can complete the donation process,
+I would like to purchase the items I've selected
 ```
 
 #### Project Diary:
