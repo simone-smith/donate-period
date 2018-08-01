@@ -1,20 +1,19 @@
 import React from 'react';
-import { Button, ButtonGroup, ButtonToolbar, Glyphicon } from "react-bootstrap";
+import Navbar from "./Navbar";
+import Content from "./Content";
+import Footer from "./Footer";
 
-
-import {Link} from "react-router-dom";
 
 const PageLayout = (props) => {
     return (
-        <div>
-            <p>hi</p>
-            <p>
-                <Link to={'/Home'}>Home</Link>{" | "}
-                <Link to={'/Charities'}>Charity List</Link>{" | "}
-                <Link to={'/About'}>About Us</Link>
-            </p>
-            <div>{props.children}</div>
-            <p>lo</p>
+        <div className="container-fluid m-0 p-0">
+            <div className="d-flex flex-column w-100 m-0 p-0">
+                <div className="p-4 item-hl"> <Navbar/> </div>
+                <div className="p-4 item-hl">
+                    <Content> {props.children} </Content>
+                </div>
+                <div className="p-4 item-hl"> <Footer/> </div>
+            </div>
         </div>
     );
 };
