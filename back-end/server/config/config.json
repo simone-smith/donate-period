@@ -1,20 +1,20 @@
 {
   "development": {
-    "username": "simonesmith",
+    "username": null,
     "password": null,
     "database": "period-dev",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "simonesmith",
+    "username": null,
     "password": null,
     "database": "period-dev",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "simonesmith",
+    "username": null,
     "password": null,
     "database": "period-dev",
     "host": "127.0.0.1",

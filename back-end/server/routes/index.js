@@ -8,9 +8,6 @@ module.exports = (app) => {
     })
   });
 
-  app.post('/api/charities', (req, res) => {
-    charitiesController.create(req, res)
-  });
   app.get('/api/charities', (req, res) => {
     charitiesController.list(req, res)
   });
@@ -18,10 +15,11 @@ module.exports = (app) => {
     charitiesController.retrieve(req, res)
   });
 
+  // These routes are not tested, as they exist solely to enable us to seed the database
+  app.post('/api/charities', (req, res) => {
+    charitiesController.create(req, res)
+  });
   app.post('/api/charities/:justGivingCharityId/items', (req, res) => {
     itemsController.create(req, res)
-  });
-  app.get('/api/charities/:justGivingCharityId/items', (req, res) => {
-    itemsController.list(req, res)
   });
 };
