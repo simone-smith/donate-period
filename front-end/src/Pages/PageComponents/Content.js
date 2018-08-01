@@ -3,13 +3,11 @@ import {Link} from "react-router-dom";
 
 const Content = (props) => {
     return (
-        <div className="container">
-            <div className="d-flex justify-content-between row-hl">
-                <div className="p-4 item-hl">Left Flex Item</div>
-                <div className="p-4 item-hl">{props.children}</div>
-                <div className="p-4 item-hl">Right Flex Item</div>
+            <div className="d-flex justify-content-between">
+                <div className="p-0"> </div>
+                <div className="p-4">{props.children}</div>
+                <div className="p-0"> </div>
             </div>
-        </div>
     );
 };
 
