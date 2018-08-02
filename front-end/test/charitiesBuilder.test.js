@@ -50,7 +50,7 @@ describe('<CharitiesBuilder />', () => {
     it("Renders a list", () => {
       const charitiesBuilder = shallow(<CharitiesBuilder />);
 
-      expect(charitiesBuilder.find('ul').exists()).toBe(true);
+      expect(charitiesBuilder.find('div').exists()).toBe(true);
     })
 
   });
