@@ -17,11 +17,11 @@ class Charity extends Component {
             <h4 className="card-title">{name}</h4>
             <h6 className="mb-2 text-monospace text-secondary">{registrationNumber}</h6>
             <p className="card-text text-justify">{description}</p>
-            <p className="text-center text-secondary">
-              <Link to={'/wishlist/' + charityId} key={charityId}>
-                <button className="btn btn-primary active" type="button">Our Wishlist</button>
-              </Link>
-            </p>
+          </div>
+          <div className="text-center text-secondary card-footer bg-transparent border-white mb-4">
+            <Link to={'/wishlist/' + charityId} key={charityId}>
+              <button className="btn btn-primary active" type="button">Our Wishlist</button>
+            </Link>
           </div>
         </div>
       </div>
