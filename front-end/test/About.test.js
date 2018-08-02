@@ -17,7 +17,7 @@ describe('<About />', () => {
 
 
   it('Displays the about info', () => {
-    let aboutInfo = "THIS IS THE ABOUT PAGE"
+    let aboutInfo = "Founded: July 23, 2018"
     expect(about.find('p').at(0).text()).toEqual(aboutInfo)
   });
 
