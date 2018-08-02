@@ -25,7 +25,7 @@ class SearchFilter extends Component {
     return (
       <div>
         <div>
-          <p className="text-center display-4"> Our Charity Partners </p>
+          <h1 className="p-4 display-4 text-center"> Our Charity Partners </h1>
         </div>
         <div className="d-flex justify-content-center">
           <form className='search-filter form-group'>
