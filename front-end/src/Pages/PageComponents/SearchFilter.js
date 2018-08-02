@@ -27,9 +27,11 @@ class SearchFilter extends Component {
         <div>
           <p className="text-center display-4"> Our Charity Partners </p>
         </div>
-        <form className='search-filter'> Search charities:
-          <input type='text' placeholder='Search' onChange={ event => this.handleChange(event) } />
-        </form>
+        <div className="d-flex justify-content-center">
+          <form className='search-filter form-group'>
+            <input className='form-control form-control-l' type='text' placeholder='Search' onChange={ event => this.handleChange(event) } />
+          </form>
+        </div>
         <div className="container">
           <div className="row">
             {filteredCharities.map((charity) => {
