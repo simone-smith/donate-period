@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Item from './PageComponents/Item'
+import ListFormat from './PageComponents/ListFormat'
 
 class Wishlist extends Component {
 
@@ -42,11 +42,7 @@ class Wishlist extends Component {
       return (
         <div>
         <div>
-        <ul>
-        {items.map(item => (
-          <Item key={item['id']} itemName={item['itemName']} description={item['itemDescription']} price={item['itemPrice']} image={item['itemImage']}/>
-        ))}
-        </ul>
+          <ListFormat items={items} />
         </div>
         <div>
         <Link to={'/charitiesBuilder'}>

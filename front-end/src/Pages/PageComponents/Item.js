@@ -4,6 +4,7 @@ class Item extends Component {
 
   constructor(props) {
       super(props);
+      const listItems = props.listItems
       this.state = {
         checked: true,
         count: 0
