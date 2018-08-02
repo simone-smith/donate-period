@@ -11,7 +11,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="p-0 m-0"> </div>
-                <div className="p-0 m-0 text-white">
+                <div className="p-0 m-0 d-inline-block text-white">
                     <Link to={'/Charities'}>
                         <button className="btn blue text-white btn-sm" type="button">CHARITY LIST</button>
                     </Link>
