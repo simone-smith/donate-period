@@ -33,7 +33,7 @@ class CharitiesBuilder extends Component {
       <div>
         <div>
           <ul>
-            {charities.map(charity => (
+            {charities.slice(0, 7).map(charity => (
               <Charity key={charity['charityId']} name={charity['name']}
               description={charity['description']}
               registrationNumber={charity['registrationNumber']}
