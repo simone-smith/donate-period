@@ -41,9 +41,6 @@ class Wishlist extends Component {
     } else {
       return (
         <div>
-        <div>
-          <p className="text-center display-4"> Our Charity Partners </p>
-          </div>
           <div>
             <ListFormat items={items} />
           </div>
