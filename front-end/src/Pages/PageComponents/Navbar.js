@@ -1,5 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 const Navbar = () => {
     return (
@@ -19,7 +22,15 @@ const Navbar = () => {
                     <Link to={'/About'}>
                         <button className="btn blue text-white btn-sm" type="button">ABOUT US</button>
                     </Link>
-                    <img src={'./static/img/page/spacer.gif'} height={1} width={120}/>
+                    <img src={'./static/img/page/spacer.gif'} height={1} width={20}/>
+                    <a className={"text-white"} href={"http://www.twitter.com"}>
+                    <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                    <img src={'./static/img/page/spacer.gif'} height={1} width={20}/>
+                    <a className={"text-white"} href={"https://github.com/simone-smith/donate-period"}>
+                    <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                    <img src={'./static/img/page/spacer.gif'} height={1} width={50}/>
                 </div>
             </div>
     );
