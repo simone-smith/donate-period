@@ -34,9 +34,6 @@ class CharitiesBuilder extends Component {
     return (
       <div>
         <SearchFilter charities={ reducedCharities }/>
-        <div>
-          <Link to={'/'}>Back</Link>
-        </div>
       </div>
     );
   }
