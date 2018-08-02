@@ -33,7 +33,7 @@ class CharitiesBuilder extends Component {
     const reducedCharities = charities.slice(0, 7)
     return (
       <div>
-        <SearchFilter charities={ charities }/>
+        <SearchFilter charities={ reducedCharities }/>
         <div>
           <Link to={'/'}>Back</Link>
         </div>
