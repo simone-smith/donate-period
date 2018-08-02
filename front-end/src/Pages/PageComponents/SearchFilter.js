@@ -24,17 +24,22 @@ class SearchFilter extends Component {
 
     return (
       <div>
-        <form className='search-filter'>
+        <div>
+          <p className="text-center display-4"> Our Charity Partners </p>
+        </div>
+        <form className='search-filter'> Search charities:
           <input type='text' placeholder='Search' onChange={ event => this.handleChange(event) } />
         </form>
-        <ul>
-          {filteredCharities.map((charity) => {
-            return <Charity key={charity['charityId']} name={charity['name']}
-            description={charity['description']}
-            registrationNumber={charity['registrationNumber']}
-            logoUrl={charity['logoUrl']} charityId={charity['charityId']} />
-          })}
-        </ul>
+        <div className="container">
+          <div className="row">
+            {filteredCharities.map((charity) => {
+              return <Charity key={charity['charityId']} name={charity['name']}
+              description={charity['description']}
+              registrationNumber={charity['registrationNumber']}
+              logoUrl={charity['logoUrl']} charityId={charity['charityId']} />
+            })}
+          </div>
+        </div>
       </div>
     );
   }
