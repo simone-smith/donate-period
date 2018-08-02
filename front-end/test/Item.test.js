@@ -13,7 +13,8 @@ describe('<Item />', () => {
     itemName: 'Test Name',
     description: 'This is a test product description',
     price: "2.99",
-    image: "http://images.testimage1.jpg"
+    image: "http://images.testimage1.jpg",
+    total: 0
   };
 
   let item = shallow(<Item {...globalProps}/>);
@@ -72,7 +73,7 @@ describe('<Item />', () => {
 
   });
 
-  describe('On clicking increase', () => {
+  describe('On clicking decrease', () => {
 
     beforeEach(() => {
       item.setState({ count: 1 })
@@ -88,7 +89,7 @@ describe('<Item />', () => {
       item.find('button').at(1).simulate('click')
       expect(item.state().count).toEqual(0)
       expect(item.find('p').at(3).text()).toEqual("0")
-    }); 
+    });
 
   });
 
@@ -100,6 +101,25 @@ describe('<Item />', () => {
 
     it('Updates the state of checked', () => {
       expect(item.state().checked).toEqual(true)
+    })
+
+  })
+
+  describe('calculator', () => {
+    const props = {
+      ...globalProps,
+    };
+
+    beforeEach(() => {
+      item.find('button').at(0).simulate('click')
+      item.find('button').at(0).simulate('click')
+    });
+
+    it('Calculates the total', () => {
+      setTimeout( () => {
+        expect(item.state().total).toEqual(5.98)
+        expect(item.find('p').at(4).text()).toEqual("Total: £5.98")
+      }, 30);
     })
 
   })
