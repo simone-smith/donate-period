@@ -5,16 +5,15 @@ class Donate extends Component {
     render() {
         return (
             <div>
-                <h1 className="p-4 display-4 text-center text-secondary">Thank You!</h1>
+                <h1 className="p-4 display-4 text-center text-secondary">You've made our day!</h1>
 
                 <p className={"text-secondary"}>
-                    <br/>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in uienply voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat norin proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    Thank you so much for your donation! Your support will have an immediate impact on the charity you selected. From both of us, thank you! We'll handle the logistics of getting getting your donation to the charity, so sit back and smile, because you've done something amazing today!
                 </p>
 
                 <p className="p-4 text-monospace text-center text-secondary">
                 <Link to={'/Charities'}>
-                    <button className="btn btn-primary active" type="button">DO YOU WANT TO DONATE MORE ?</button>
+                    <button className="btn btn-primary active" type="button">Donate to another charity!</button>
                 </Link>
                 </p>
             </div>
