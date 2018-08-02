@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import Charity from './Charity';
-import SearchFilter from './PageComponents/SearchFilter'
-
+import { Link } from 'react-router-dom';
+import Charity from './PageComponents/Charity';
 
 class CharitiesBuilder extends Component {
   constructor(props) {
@@ -33,24 +31,19 @@ class CharitiesBuilder extends Component {
     const { charities } = this.state;
     return (
       <div>
-      <div>
-      <SearchFilter charities={charities}/>
-      <ul>
-      {charities.map(charity => (
-        <li key={charity['charityId']}>
-          { charity['name']} <br/>
-          { charity['description'] }<br/>
-          { charity['registrationNumber'] }<br/>
-          <img src= { charity['logoUrl'] } height="42" width="auto" /><br/>
-          <Link to={'/wishlist/' + charity['charityId']} key={charity['charityId']}>Our Wishlist</Link>
-        </li>
-      ))}
-      </ul>
-      </div>
-
-      <div>
-        <Link to={'/'}>Back</Link>
-      </div>
+        <div>
+          <ul>
+            {charities.map(charity => (
+              <Charity key={charity['charityId']} name={charity['name']}
+              description={charity['description']}
+              registrationNumber={charity['registrationNumber']}
+              logoUrl={charity['logoUrl']} charityId={charity['charityId']} />
+            ))}
+          </ul>
+        </div>
+        <div>
+          <Link to={'/'}>Back</Link>
+        </div>
       </div>
     );
   }
