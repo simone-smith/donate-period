@@ -41,18 +41,16 @@ class Wishlist extends Component {
     } else {
       return (
         <div>
-          <div>
             <ListFormat items={items} />
-          </div>
-          <div>
-            <Link to={'/charitiesBuilder'}>
-              Back
-            </Link>
-            {" "}
-            <Link to={'/donate'}>
-              Donate Now
-            </Link>
-          </div>
+            <p className="p-4 text-monospace text-right text-secondary">
+                <Link to={'/Charities'}>
+                    <button className="btn btn-primary active" type="button">Back</button>
+                </Link>
+                {" "}
+                <Link to={'/Donate'}>
+                    <button className="btn btn-primary active" type="button">Donate Now</button>
+                </Link>
+            </p>
         </div>
       );
     }
