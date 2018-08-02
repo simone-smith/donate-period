@@ -5,7 +5,7 @@ class About extends Component {
   render() {
     return (
       <div className="pageContainer">
-          <h1 className="p-2 display-4 text-center text-secondary">About Us</h1>
+          <h1 className="p-4 display-4 text-center">About Us</h1>
           <p className="text-monospace text-center text-secondary">Founded: July 23, 2018</p>
           <p className={"m-2 text-monospace text-justify text-secondary"}>
               Donate, Period is a web platform that connects donors with the items
