@@ -45,11 +45,8 @@ XXXXXX
 #### How to use the website:
 1. Open the back end server with ```node app.js``` or ```npm start```
 2. The terminal will display the localhost port number for you to visit: ```localhost:3010```
-3. Launch the client side application with ```npm start``` and navigate from the home page on to explore the site.
+3. Launch the client side application with ```npm start```, visit ```localhost:3000``` and navigate from the home page on to explore the site.
 3. When finished with the application, close each server with ```^c```
-
-#### Run Tests:
-1. Backend-tests ```npm test```
 
 #### Work Flow - Tickets
 [Trello](https://trello.com/b/q4a2xRgA/donation-period)
@@ -60,7 +57,8 @@ XXXXXX
 #### Route Table
 |     Task      | HTTP-method | URI |  Content-Type   |
 | --- | --- | --- | --- |
-| Retrieve wishlist items    |   GET    |  /wishlist |   JSON   |
+| Retrieve list of charities and their wishlists    |   GET    |  /api/charities |   JSON   |
+| Retrieve a charities' wishlist   | GET   | api/charities/:justGivingCharityId | JSON |
 
 #### Development Process
 
@@ -68,6 +66,10 @@ XXXXXX
 During development process we used nodemon to manage our server connection. This package watches for changes in our code base and restarts the server when a change is identified: ```nodemon app.js```
 
 We used Postman for exploring API calls to our endpoints.
+
+Item images are hosted in an Amazon AWS S3 bucket, with Cross Origin Blocking turned off.
+
+Our POST routes are used for seeding data into the database for development purposes only and are not part of our application's current functionality, therefore we have not tested these routes.
 
 ##### Front End Application
 For improved development workflow we used hotloading and served the application via webpack.  
