@@ -19,7 +19,7 @@ const Footer = () => {
                 JOBS<br/>
                 <p className={"mt-2"}>We are looking for talent<br/>
                 <a className={"text-white"} href={`mailto:jobs@donate-period.com?Subject=Hello%20again`}>
-                    job@sdonate-period.com</a></p>
+                    jobs@donate-period.com</a></p>
             </div>
         </div>
     )
