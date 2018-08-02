@@ -73,7 +73,7 @@ describe('<Item />', () => {
 
   });
 
-  describe('On clicking increase', () => {
+  describe('On clicking decrease', () => {
 
     beforeEach(() => {
       item.setState({ count: 1 })
@@ -114,7 +114,6 @@ describe('<Item />', () => {
       item.find('button').at(0).simulate('click')
       item.find('button').at(0).simulate('click')
     });
-    //     expect(item.state().count).toEqual(1)
 
     it('Calculates the total', () => {
       setTimeout( () => {
