@@ -43,6 +43,36 @@ module.exports = {
       justGivingCharityId: 2157,
       createdAt: '2018-08-01 12:10:02',
       updatedAt: '2018-08-01 12:10:02',
+    },
+    {
+      name: "Diabetes UK",
+      justGivingCharityId: 19172,
+      createdAt: '2018-08-01 12:10:02',
+      updatedAt: '2018-08-01 12:10:02',
+    },
+    {
+      name: "Great Ormond Street Hospital Children's Charity",
+      justGivingCharityId: 254,
+      createdAt: '2018-08-01 12:10:02',
+      updatedAt: '2018-08-01 12:10:02',
+    },
+    {
+      name: "Parkinson’s UK",
+      justGivingCharityId: 11233,
+      createdAt: '2018-08-01 12:10:02',
+      updatedAt: '2018-08-01 12:10:02',
+    },
+    {
+      name: "The Prince's Trust",
+      justGivingCharityId: 130521,
+      createdAt: '2018-08-01 12:10:02',
+      updatedAt: '2018-08-01 12:10:02',
+    },
+    {
+      name: "Marie Curie",
+      justGivingCharityId: 50,
+      createdAt: '2018-08-01 12:10:02',
+      updatedAt: '2018-08-01 12:10:02',
     }], {});
   },
 
