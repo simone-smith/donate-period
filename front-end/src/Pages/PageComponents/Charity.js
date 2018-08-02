@@ -10,12 +10,20 @@ class Charity extends Component {
   render() {
     const { name, description, registrationNumber, logoUrl, charityId } = this.props;
     return (
-      <div>
-        {name} <br/>
-        {description}<br/>
-        {registrationNumber}<br/>
-        <img src={logoUrl} height="42" width="auto" /><br/>
-        <Link to={'/wishlist/' + charityId} key={charityId}>Our Wishlist</Link>
+      <div className="col-sm-6 d-flex align-items-stretch p-2">
+        <div className="card">
+          <div className="card-body">
+            <img className="card-img-top img-thumbnail b-2" src={logoUrl}/>
+            <h4 className="card-title">{name}</h4>
+            <h6 className="mb-2 text-monospace text-left text-secondary">{registrationNumber}</h6>
+            <p className="card-text">{description}</p>
+            <p className="text-center text-secondary">
+              <Link to={'/wishlist/' + charityId} key={charityId}>
+                <button className="btn btn-primary active" type="button">Our Wishlist</button>
+              </Link>
+            </p>
+          </div>
+        </div>
       </div>
     )
   }

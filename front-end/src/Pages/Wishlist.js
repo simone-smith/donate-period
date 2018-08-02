@@ -41,18 +41,18 @@ class Wishlist extends Component {
     } else {
       return (
         <div>
-        <div>
-          <ListFormat items={items} />
-        </div>
-        <div>
-        <Link to={'/charitiesBuilder'}>
-          Back
-        </Link>
-        {" "}
-        <Link to={'/donate'}>
-          Donate Now
-        </Link>
-        </div>
+          <div>
+            <ListFormat items={items} />
+          </div>
+          <div>
+            <Link to={'/charitiesBuilder'}>
+              Back
+            </Link>
+            {" "}
+            <Link to={'/donate'}>
+              Donate Now
+            </Link>
+          </div>
         </div>
       );
     }
