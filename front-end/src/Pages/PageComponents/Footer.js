@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <div className = "ml-4 pl-2 p-0" >
                 JOBS<br/>
-                <p className={"mt-2"}>We are looking for jobs. Check out our github: <br/>
+                <p className={"mt-2"}>We are looking for jobs. Check out our GitHub: <br/>
                 <a className={"text-white"} href={`https://github.com/simone-smith/donate-period`}>
                     Donate, Period</a></p>
             </div>
