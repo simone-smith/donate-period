@@ -85,7 +85,7 @@ class Donate extends Component {
               </div>
           </div>
           <p className="p-4 text-monospace text-right text-secondary">
-          <Link to={'/CharitiesBuilder'}>
+          <Link to={'/Charities'}>
                 <button className="btn btn-primary active" type="button">CANCEL</button>
           </Link>
               {" "}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class Home extends Component {
   render() {
     return (
-        <divs>
+        <div>
             <h1 className="p-4 display-4 text-center text-secondary">Donate Period</h1>
             <p className="m-2 text-monospace text-center text-secondary">
                 Giving individuals the power to make impactful donations by connecting them with the items charities need most.
@@ -23,7 +23,7 @@ class Home extends Component {
                 <button className="btn btn-primary active" type="button">About</button>
             </Link>
             </p>
-        </divs>
+        </div>
     );
   }
 }

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { faArrowAltCircleDown, faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 class Item extends Component {
 
@@ -48,16 +51,31 @@ class Item extends Component {
     const { itemName, description, price, image, total } = this.props;
     return (
       <div>
-        <p>{itemName}</p>
-        <p>{description}</p>
-        <p>£{price}</p>
-        <button onClick={ () => this.handleIncrease() }>Up</button>
-        <p>{this.state.count}</p>
-        <button onClick={ () => this.handleDecrease() }>Down</button>
-        <br/>
-        <p>Total: £{this.state.total}</p>
-        <img src={image} height="42" width="auto" alt={itemName}></img>
-        <input type='checkbox' onChange={ () => this.handleChange() }/>
+          <div className="d-flex pl-4 pr-4 m-4 border rounded">
+              <div className="p-2 w-100">
+                  <div className="d-flex flex-nowrap">
+                      <div className="order-8 p-0">
+                          <p className="m-0 p-2 pr-4 text-monospace text-center text-secondary">£{price}</p>
+                          <div className="pr-4"><img src={image} height="84" width="auto" alt={itemName}/></div>
+                      </div>
+                      <div className="order-12 p-2">
+                          <h4>{itemName}</h4>
+                          <p className="font-weight-normal">{description}</p>
+                      </div>
+                  </div>
+              </div>
+              <div className="p-2 flex-shrink-1 align-self-center">
+                  <div className="d-flex flex-nowrap">
+                      <FontAwesomeIcon onClick={ () => this.handleDecrease() } className={"mr-2 text-secondary"} size='2x' icon={faArrowAltCircleDown}/>
+                      {this.state.count}
+                      <FontAwesomeIcon onClick={ () => this.handleIncrease() } className={"ml-2 text-secondary"} size='2x' icon={faArrowAltCircleUp}/>
+                  </div>
+                    <p className="m-0 pt-3 pr-2 text-monospace text-right text-secondary">£{this.state.total}</p>
+              </div>
+
+
+          </div>
+
         <div>{this.props.children}</div>
       </div>
     )
