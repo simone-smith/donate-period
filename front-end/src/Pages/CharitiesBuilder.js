@@ -31,15 +31,18 @@ class CharitiesBuilder extends Component {
     const { charities } = this.state;
     return (
       <div>
+        <p className="text-center display-4"> Our Charity Partners </p>
         <div>
-          <ul>
+        <div className="container">
+          <div className="row">
             {charities.map(charity => (
               <Charity key={charity['charityId']} name={charity['name']}
               description={charity['description']}
               registrationNumber={charity['registrationNumber']}
               logoUrl={charity['logoUrl']} charityId={charity['charityId']} />
             ))}
-          </ul>
+          </div>
+          </div>
         </div>
         <div>
           <Link to={'/'}>Back</Link>
