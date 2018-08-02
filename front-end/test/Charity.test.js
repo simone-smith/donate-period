@@ -25,9 +25,9 @@ describe('<Charity />', () => {
         ...globalProps,
       };
       let description = "Alzheimer’s Society is transforming the\r\nlandscape of dementia forever.\r\nUntil the day we find a cure, we will create a\r\nsociety where those affected by dementia\r\nare supported and accepted, able to live in\r\ntheir community without fear or prejudice."
-      expect(charity.find('div').text()).toEqual( expect.stringContaining("Alzheimer's Society"))
-      expect(charity.find('div').text()).toEqual( expect.stringContaining("Registered charity No. 296645"))
-      expect(charity.find('div').text()).toEqual( expect.stringContaining(description))
+      expect(charity.find('h4').text()).toEqual( expect.stringContaining("Alzheimer's Society"))
+      expect(charity.find('h6').text()).toEqual( expect.stringContaining("Registered charity No. 296645"))
+      expect(charity.find('p').at(0).text()).toEqual( expect.stringContaining(description))
     });
 
     it("Charities' logo is displayed", () => {

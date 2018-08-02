@@ -16,7 +16,7 @@ describe('<SearchFilter />', () => {
     });
 
   describe('When typing a search query', () => {
-    let charityName = 'Test Charity';
+    let charityName = 'test charity';
 
     beforeEach(() => {
       searchFilter.find('input').at(0).simulate('change', {
