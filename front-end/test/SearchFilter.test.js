@@ -15,10 +15,6 @@ describe('<SearchFilter />', () => {
       expect(searchFilter.find('form').exists()).toBe(true);
     });
 
-    it('Renders a search button', () => {
-      expect(searchFilter.find('input').at(1).render().attr('value')).toEqual('Search');
-    });
-
   describe('When typing a search query', () => {
     let charityName = 'Test Charity';
 

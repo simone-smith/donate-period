@@ -1,39 +1,38 @@
 import React, { Component } from 'react';
-import Charity from '../Charity.js';
+import Charity from './Charity.js';
 
 class SearchFilter extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       searchFilter: ""
     };
   }
 
   handleChange(event) {
-    this.setState({ searchFilter: event.target.value });
-  }
-
-  handleSubmit(event) {
-    this.setState({ searchFilter: event.target.value });
+    this.setState({ searchFilter: event.target.value.toLowerCase() });
   }
 
   render() {
     let filteredCharities = this.props.charities.filter(
       (charity) => {
-        return charity.name.indexOf(this.state.searchFilter) !== -1;
+        let lowerCaseName = charity.name.toLowerCase()
+        return lowerCaseName.indexOf(this.state.searchFilter) !== -1;
       }
     );
 
     return (
       <div>
-        <form className='search-filter' onSubmit={() => this.handleSubmit(event)}>
-          <input onChange={ event => this.handleChange(event) } />
-          <input type="submit" value="Search" />
+        <form className='search-filter'>
+          <input type='text' placeholder='Search' onChange={ event => this.handleChange(event) } />
         </form>
         <ul>
           {filteredCharities.map((charity) => {
-            return <Charity charityName={charity} key={charity.charityId} />
+            return <Charity key={charity['charityId']} name={charity['name']}
+            description={charity['description']}
+            registrationNumber={charity['registrationNumber']}
+            logoUrl={charity['logoUrl']} charityId={charity['charityId']} />
           })}
         </ul>
       </div>

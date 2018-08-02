@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Charity from './PageComponents/Charity';
+import SearchFilter from './PageComponents/SearchFilter'
 
 class CharitiesBuilder extends Component {
   constructor(props) {
@@ -29,18 +30,10 @@ class CharitiesBuilder extends Component {
 
   render() {
     const { charities } = this.state;
+    const reducedCharities = charities.slice(0, 7)
     return (
       <div>
-        <div>
-          <ul>
-            {charities.slice(0, 7).map(charity => (
-              <Charity key={charity['charityId']} name={charity['name']}
-              description={charity['description']}
-              registrationNumber={charity['registrationNumber']}
-              logoUrl={charity['logoUrl']} charityId={charity['charityId']} />
-            ))}
-          </ul>
-        </div>
+        <SearchFilter charities={ reducedCharities }/>
         <div>
           <Link to={'/'}>Back</Link>
         </div>
