@@ -11,7 +11,7 @@ class Home extends Component {
             </h4>
             <p className="lead text-secondary">
                 <br/>
-                Charities often have certain needed items that are expensive to purchase and also aren’t items are typically donated. Donors want to make impactful donations, but often don’t know what items the charity need to operate. Donate, Period solves this problem from both ends by creating a platform to connect donors with the items charities need most.
+                Charities often have certain needed items that are expensive to purchase and also aren’t items that are typically donated. Donors want to make impactful donations, but often don’t know what items the charity needs to operate. Donate, Period solves this problem from both ends by creating a platform to connect donors with the items charities need most.
             </p>
             <p></p>
             <p className="p-4 text-monospace text-center text-secondary">
