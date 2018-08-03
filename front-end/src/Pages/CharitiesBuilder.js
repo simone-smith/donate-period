@@ -30,7 +30,7 @@ class CharitiesBuilder extends Component {
 
   render() {
     const { charities } = this.state;
-    const reducedCharities = charities.slice(0, 7)
+    const reducedCharities = charities.slice(0, 12)
     return (
       <div>
         <SearchFilter charities={ reducedCharities }/>
