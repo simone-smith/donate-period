@@ -3,7 +3,8 @@
   "private": true,
   "jest": {
     "verbose": true,
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "testPathIgnorePatterns": ["./cypress/"]
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
