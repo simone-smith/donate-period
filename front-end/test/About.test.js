@@ -21,7 +21,4 @@ describe('<About />', () => {
     expect(about.find('p').at(0).text()).toEqual(aboutInfo)
   });
 
-  it('Renders a Link home', () => {
-    // expect(about.find('Link').render().attr('to')).toEqual("Home");
-  });
 });
