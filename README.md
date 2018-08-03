@@ -24,7 +24,10 @@ Makers Academy final project. We have built a web app in 10 days that enables a 
 ##### Server Side App
 1. Change into the directory ```cd back-end```
 2. Run ```npm install``` to add module dependencies
-3. Open the server with ```npm start```
+3. Seed the database:
+  a. ```./node_modules/.bin/sequelize db:seed --seed 20180801171407-demo-charity.js```
+  b. ```./node_modules/.bin/sequelize db:seed --seed 20180801105807-demo-item.js```
+4. Open the server with ```npm start```
 
 #### Run Tests:
 1. Back end and front end tests ```npm test```
@@ -32,15 +35,7 @@ Makers Academy final project. We have built a web app in 10 days that enables a 
 #### Test Coverage:
 ##### Client Side App
 1. Run using Jest coverage tool ```npm test -- --coverage```
-
-Current Coverage:
-XXXXX
-
-##### Server Side App
-1. XXXXX
-
-Current Coverage:
-XXXXXX
+2. Current Coverage: 93%
 
 #### How to use the website:
 1. Open the back end server with ```node app.js``` or ```npm start```
