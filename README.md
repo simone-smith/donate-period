@@ -10,6 +10,10 @@ Makers Academy final project. We have built a web app in 10 days that enables a 
 * Jen Strong https://github.com/JenStrong
 * Simone Smith https://github.com/simone-smith
 
+## Demo
+![alt text](https://s3.eu-west-2.amazonaws.com/donate-period/out.gif)
+
+
 ## Quickstart:
 #### How to install the code:
 1. Clone this project ```git clone https://github.com/simone-smith/donate-period.git```
