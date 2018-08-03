@@ -499,7 +499,7 @@ module.exports = {
       },
       {
         itemName: 'Toilet paper',
-        itemDescription: 'Toilet paper is in constant need, so if you can donate some you are guaranteed to make a difference.',
+        itemDescription: 'Toilet paper is in constant need, so if you can donate some you will be guaranteed to make a difference.',
         itemImage: "https://s3.eu-west-2.amazonaws.com/donate-period/toilet-paper.png",
         itemPrice: 3.00,
         createdAt: '2018-08-01 12:10:02',

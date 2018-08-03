@@ -71,8 +71,8 @@ module.exports = {
     {
       name: "Marie Curie",
       justGivingCharityId: 50,
-      createdAt: '2018-08-01 12:10:02',
-      updatedAt: '2018-08-01 12:10:02',
+      createdAt: '2018-08-01 12:10:03',
+      updatedAt: '2018-08-01 12:10:03',
     }], {});
   },
 
