@@ -28,9 +28,11 @@ Makers Academy final project. We have built a web app in 10 days that enables a 
 ##### Server Side App
 1. Change into the directory ```cd back-end```
 2. Run ```npm install``` to add module dependencies
-3. Seed the database:
-  a. ```./node_modules/.bin/sequelize db:seed --seed 20180801171407-demo-charity.js```
-  b. ```./node_modules/.bin/sequelize db:seed --seed 20180801105807-demo-item.js```
+3. Seed the database: <br/>
+  a. ```./node_modules/.bin/sequelize db:create```<br/>
+  b. ```./node_modules/.bin/sequelize db:migrate```<br/>
+  c. ```./node_modules/.bin/sequelize db:seed --seed 20180801171407-demo-charity.js```<br/>
+  d. ```./node_modules/.bin/sequelize db:seed --seed 20180801105807-demo-item.js```<br/>
 4. Open the server with ```npm start```
 
 #### Run Tests:
