@@ -10,10 +10,15 @@ global.fetch = require('jest-fetch-mock');
 
 describe('<Wishlist />', () => {
 
+  const globalProps = { match: { params: { id: "2201" } } }
+
   describe("ComponentDidMount", () => {
 
     it("Calls fetch", () => {
-      let wishlist = shallow(<Wishlist/>);
+      const props = {
+        ...globalProps,
+      };
+      let wishlist = shallow(<Wishlist {...globalProps} />);
       expect(fetch).toHaveBeenCalledTimes(1);
     });
 
@@ -35,7 +40,10 @@ describe('<Wishlist />', () => {
       });
 
       it('Updates the component state', () => {
-          const wrapper = shallow(<Wishlist/>);
+          const props = {
+            ...globalProps,
+          };
+          const wrapper = shallow(<Wishlist {...globalProps} />);
           setImmediate(() => {
               wrapper.update();
               expect(wrapper.state('items')).toEqual([{item: 'test item'}]);
@@ -46,7 +54,10 @@ describe('<Wishlist />', () => {
   describe('Render', () => {
 
     it("An error is displayed", () => {
-        let wishlist = shallow(<Wishlist/>);
+      const props = {
+        ...globalProps,
+      };
+      let wishlist = shallow(<Wishlist {...globalProps} />);
 
         wishlist.setState({
             error: true,
@@ -58,32 +69,19 @@ describe('<Wishlist />', () => {
     });
 
     it("The page is loading", () => {
-        let wishlist = shallow(<Wishlist/>);
+      const props = {
+        ...globalProps,
+      };
+      let wishlist = shallow(<Wishlist {...globalProps} />);
 
-        wishlist.setState({
-            error: false,
-            isLoaded: false,
-            items: []
+      wishlist.setState({
+          error: false,
+          isLoaded: false,
+          items: []
         });
 
         expect(wishlist.text()).toEqual("Loading...")
     });
-
-    it("Items are displayed", () => {
-        let wishlist = shallow(<Wishlist/>);
-
-        wishlist.setState({
-            error: false,
-            isLoaded: true,
-            items: [
-              { "item": "toilet paper" },
-              { "item": "sanitary pads" },
-              { "item": "tampons" },
-              { "item": "wet wipes" }
-            ]
-        });
-        expect(wishlist.find('ul').text()).toEqual( "toilet papersanitary padstamponswet wipes")
-      });
 
     });
 

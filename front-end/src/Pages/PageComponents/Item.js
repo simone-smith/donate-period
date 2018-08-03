@@ -67,7 +67,9 @@ class Item extends Component {
               <div className="p-2 flex-shrink-1 align-self-center">
                   <div className="d-flex flex-nowrap">
                       <FontAwesomeIcon onClick={ () => this.handleDecrease() } className={"mr-2 text-secondary"} size='2x' icon={faArrowAltCircleDown}/>
-                      {this.state.count}
+                        <div>
+                          {this.state.count}
+                        </div>
                       <FontAwesomeIcon onClick={ () => this.handleIncrease() } className={"ml-2 text-secondary"} size='2x' icon={faArrowAltCircleUp}/>
                   </div>
                     <p className="m-0 pt-3 pr-2 text-monospace text-right text-secondary">£{this.state.total}</p>
