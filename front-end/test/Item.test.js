@@ -24,7 +24,7 @@ describe('<Item />', () => {
       ...globalProps,
     };
 
-    expect(item.find('p').at(0).text()).toEqual(props.itemName)
+    expect(item.find('h4').at(0).text()).toEqual(props.itemName)
   })
 
   it('Renders the item decription', () => {
@@ -40,15 +40,15 @@ describe('<Item />', () => {
       ...globalProps,
     };
 
-    expect(item.find('p').at(2).text()).toEqual("£" + props.price)
+    expect(item.find('p').at(0).text()).toEqual("£" + props.price)
   })
 
   it('Renders the increase button', () => {
-    expect(item.find('button').at(0).text()).toEqual('Up')
+    expect(item.find('FontAwesomeIcon').at(1).exists()).toBe(true);
   })
 
   it('Renders the decrease button', () => {
-    expect(item.find('button').at(1).text()).toEqual('Down')
+    expect(item.find('FontAwesomeIcon').at(0).exists()).toBe(true);
   })
 
   it('Renders the image', () => {
@@ -56,19 +56,15 @@ describe('<Item />', () => {
     expect(img.render().attr('src')).toEqual("http://images.testimage1.jpg")
   })
 
-  it('Renders a control checkbox', () => {
-    expect(item.find('input').exists()).toBe(true);
-  })
-
   describe('On clicking increase', () => {
 
     beforeEach(() => {
-      item.find('button').at(0).simulate('click')
+      item.find('FontAwesomeIcon').at(1).simulate('click')
     });
 
     it('Increases the counter', () => {
       expect(item.state().count).toEqual(1)
-      expect(item.find('p').at(3).text()).toEqual("1")
+      expect(item.find('div').at(9).text()).toEqual("1")
     });
 
   });
@@ -77,33 +73,22 @@ describe('<Item />', () => {
 
     beforeEach(() => {
       item.setState({ count: 1 })
-      item.find('button').at(1).simulate('click')
+      item.find('FontAwesomeIcon').at(0).simulate('click')
     });
 
     it('Decrease the counter', () => {
       expect(item.state().count).toEqual(0)
-      expect(item.find('p').at(3).text()).toEqual("0")
+      expect(item.find('div').at(9).text()).toEqual("0")
     });
 
     it('Prevents the counter from going below zero', () => {
-      item.find('button').at(1).simulate('click')
+      item.find('FontAwesomeIcon').at(0).simulate('click')
       expect(item.state().count).toEqual(0)
-      expect(item.find('p').at(3).text()).toEqual("0")
+      expect(item.find('div').at(9).text()).toEqual("0")
     });
 
   });
 
-  describe('On clicking the check box', () => {
-
-    beforeEach(() => {
-      item.find('input').at(0).simulate('check', { target: { checked: true } })
-    });
-
-    it('Updates the state of checked', () => {
-      expect(item.state().checked).toEqual(true)
-    })
-
-  })
 
   describe('calculator', () => {
     const props = {
@@ -111,8 +96,8 @@ describe('<Item />', () => {
     };
 
     beforeEach(() => {
-      item.find('button').at(0).simulate('click')
-      item.find('button').at(0).simulate('click')
+      item.find('FontAwesomeIcon').at(1).simulate('click')
+      item.find('FontAwesomeIcon').at(1).simulate('click')
     });
 
     it('Calculates the total', () => {
