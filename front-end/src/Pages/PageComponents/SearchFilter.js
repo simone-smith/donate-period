@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Charity from '../Charity.js';
+import Charity from './Charity.js';
 
 class SearchFilter extends Component {
 
