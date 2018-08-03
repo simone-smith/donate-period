@@ -10,7 +10,7 @@ const Navbar = () => {
                 <div className="p-0 m-1">
                     <img src={'./static/img/page/spacer.gif'} height={1} width={30}/>
                     <Link to={'/'}>
-                        <button className="btn blue text-white btn-lg" type="button">LOGO</button>
+                        <button className="btn blue text-white btn-lg" type="button">Donate, Period</button>
                     </Link>
                 </div>
                 <div className="p-0 m-0"> </div>
