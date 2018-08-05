@@ -11,7 +11,7 @@ Makers Academy final project. We have built a web app in 10 days that enables a 
 * Simone Smith https://github.com/simone-smith
 
 ## Demo
-![alt text](https://github.com/simone-smith/donate-period/blob/logo/public/out.gif)
+![alt text](https://github.com/simone-smith/donate-period/blob/master/public/out.gif)
 
 
 ## Quickstart:
